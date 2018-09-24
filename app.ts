@@ -1,11 +1,14 @@
 
-let module = angular.module('ccApp', []);
+let module = angular.module('ccApp', [
+  'shopping'
+]);
 
 module.component("herosComponent", {
     template: `
       <ul>
         <li ng-repeat="hero in $ctrl.heros">{{ hero.name }}</li>
       </ul>
+      <shopping-component />
     `,
     controller: function() {
       this.heros = [

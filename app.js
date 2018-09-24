@@ -1,6 +1,8 @@
-var module = angular.module('ccApp', []);
+var module = angular.module('ccApp', [
+    'shopping'
+]);
 module.component("herosComponent", {
-    template: "\n      <ul>\n        <li ng-repeat=\"hero in $ctrl.heros\">{{ hero.name }}</li>\n      </ul>\n    ",
+    template: "\n      <ul>\n        <li ng-repeat=\"hero in $ctrl.heros\">{{ hero.name }}</li>\n      </ul>\n      <shopping-component />\n    ",
     controller: function () {
         this.heros = [
             { id: 11, name: 'Mr. Nice' },
