@@ -3,7 +3,7 @@ function Hello() {
     alert(x);
 }
 // Hello();
-var Greeter = (function () {
+var Greeter = /** @class */ (function () {
     function Greeter(message) {
         this.greeting = message;
     }
