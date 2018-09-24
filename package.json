@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-UI/angularjs-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-UI/angularjs-typescript/issues"
+  },
+  "homepage": "https://github.com/Compass-UI/angularjs-typescript#readme",
+  "dependencies": {
+    "@types/angular": "^1.6.51",
+    "@types/knockout": "^3.4.59",
+    "angular": "^1.7.4",
+    "types": "^0.1.1"
+  }
+}
