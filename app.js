@@ -1,6 +1,9 @@
 var module = angular.module('ccApp', [
     'shopping'
 ]);
+module.run(function ($rootScope) {
+    $rootScope.state = {};
+});
 module.component("herosComponent", {
     template: "\n      <ul>\n        <li ng-repeat=\"hero in $ctrl.heros\">{{ hero.name }}</li>\n      </ul>\n      <shopping-component />\n    ",
     controller: function () {

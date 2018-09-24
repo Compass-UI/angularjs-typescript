@@ -3,6 +3,10 @@ let module = angular.module('ccApp', [
   'shopping'
 ]);
 
+module.run(function($rootScope){
+  $rootScope.state = {}
+})
+
 module.component("herosComponent", {
     template: `
       <ul>
