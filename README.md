@@ -1,7 +1,8 @@
 # AngularJS with TypeScript
 
 For a quick example see:
-[https://brianflove.com/2016/12/26/typing-up-your-angular-1-app/](AngularJS with TypeScript)
+
+(AngularJS with TypeScript)[https://brianflove.com/2016/12/26/typing-up-your-angular-1-app/]
 
 ## Installation
 
@@ -21,3 +22,10 @@ gemini-david 🌴  tsd install angular --resolve --save
 
 `npm install --save @types/knockout`
 [https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/knockout](Knockout Typings)
+
+# Frequently Used Commands
+| Command        | Depricated           | Comment  |
+| ------------- |:-------------:| -----:|
+|   npm i types   | npm i @typeings |  |
+|       |       |    |
+|  |       |     |
