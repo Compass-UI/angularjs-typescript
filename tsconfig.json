@@ -3,7 +3,17 @@
         "module": "commonjs",
         "target": "es5"
     },
-    "files": [
+    // "files": [
+    //     "app.ts",
+    //     "./shopping/*.ts"
+    // ]
+    "include": [
+        "shopping/**/*",
         "app.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
     ]
+
 }

@@ -29,3 +29,5 @@ gemini-david 🌴  tsd install angular --resolve --save
 |   npm i types   | npm i @typeings |  |
 |       |       |    |
 |  |       |     |
+
+# Final Notes
