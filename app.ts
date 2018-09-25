@@ -12,15 +12,20 @@ module.run(function($rootScope){
 
 
 module
-.controller('modalController', ['$scope', function($scope) {
+.controller('modalController', ['$scope', '$uibModal', function($scope, $uibModal) {
   $scope.customer = {
     name: 'Naomi',
     address: '1600 Amphitheatre'
   };
+  $scope.openModal = function(){
+    var modalInstance = $uibModal.open({
+      templateUrl: 'modal.tmpl.html'
+    })
+  }
 }])
 .directive('modalDirective', function() {
   return {
-    template: '<h1>Name: {{customer.name}} Address: {{customer.address}}</h1>'
+    template: '<button ng-click="openModal()">openModal</button><h1>Name: {{customer.name}} Address: {{customer.address}}</h1>'
   };
 });
 
