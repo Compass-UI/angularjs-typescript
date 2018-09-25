@@ -1,11 +1,29 @@
 
 let module = angular.module('ccApp', [
-  'shopping'
+  'shopping',
+  'ngAnimate',
+  'ngSanitize',
+  'ui.bootstrap'
 ]);
 
 module.run(function($rootScope){
   $rootScope.state = {}
 })
+
+
+module
+.controller('modalController', ['$scope', function($scope) {
+  $scope.customer = {
+    name: 'Naomi',
+    address: '1600 Amphitheatre'
+  };
+}])
+.directive('modalDirective', function() {
+  return {
+    template: '<h1>Name: {{customer.name}} Address: {{customer.address}}</h1>'
+  };
+});
+
 
 module.component("herosComponent", {
     template: `

@@ -1,3 +1,4 @@
+///<reference path="/Users/david1/Compass/angularjs-typescript/node_modules/@types/angular/index.d.ts" />
 angular.module('shopping', [])
     .component('shoppingComponent', {
     templateUrl: "./shopping/shopping.tmpl.html",
@@ -19,3 +20,6 @@ angular.module('shopping', [])
         };
     }
 });
+// .directive('shoppingDirective', {
+//     templateUrl: './shopping-directive.tmpl.html'
+// })

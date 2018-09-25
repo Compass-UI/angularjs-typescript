@@ -18,15 +18,29 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="./node_modules/angular/angular.js"></script>
-    <link rel="stylesheet" href="./node_modules/angular/angular-csp.css">
+    <!-- <script src="./node_modules/angular/angular.js"></script> -->
+    <!-- <link rel="stylesheet" href="./node_modules/angular/angular-csp.css"> -->
+
+    <!-- UI Bootstrap -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 
-<body ng-app>
+<body ng-app="ccApp">
 
     <heros-component></heros-component>
-    <shopping-component></shopping-component>
+    <!-- <shopping-component></shopping-component> -->
+    <!-- <shopping-directive></shopping-directive> -->
+    <!-- <simple-directive></simple-directive> -->
+    <modal-directive></modal-directive>
 
+
+    <div ng-controller="modalController">
+            <modal-directive></modal-directive>
+    </div>
 <button class="btn btn-primary" ng-click="shopping.getState('name')">getState</button>
 
 
