@@ -9,19 +9,31 @@ module.run(function ($rootScope) {
 });
 module
     .controller('modalController', ['$scope', '$uibModal', function ($scope, $uibModal) {
+        var that = this;
         $scope.customer = {
             name: 'Naomi',
             address: '1600 Amphitheatre'
         };
         $scope.openModal = function () {
             var modalInstance = $uibModal.open({
-                templateUrl: 'modal.tmpl.html'
+                templateUrl: 'modal.tmpl.html',
+                controllerAs: '$ctrl',
+                controller: function () {
+                },
+                resolve: {
+                    traveler: function () {
+                        return {
+                        // that.user
+                        };
+                    }
+                }
             });
         };
     }])
     .directive('modalDirective', function () {
     return {
-        template: '<button ng-click="openModal()">openModal</button><h1>Name: {{customer.name}} Address: {{customer.address}}</h1>'
+        template: '<button ng-click="openModal()">openModal</button>',
+        controller: 'modalController'
     };
 });
 module.component("herosComponent", {
