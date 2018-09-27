@@ -60,8 +60,10 @@ angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function ($uibMo
         }
       }
     });
-    modalInstance.result.then(function(){
-      console.log('modalInstance.result.then');
+    modalInstance.result.then(function(dataFromModal){
+      console.log(dataFromModal);
+    }, function(){
+      console.log('Modal dismissed')
     })
   }
   $ctrl.serviceCall = 'Call $http';
@@ -103,7 +105,7 @@ angular.module('ui.bootstrap.demo').component('loyaltyComponent', {
 
 // Please note that $uibModalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
-angular.module('').controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
+angular.module('ui.bootstrap.demo').controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
   var $ctrl = this;
   $ctrl.items = items;
   $ctrl.selected = {
