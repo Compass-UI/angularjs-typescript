@@ -31,3 +31,20 @@ gemini-david 🌴  tsd install angular --resolve --save
 |  |       |     |
 
 # Final Notes
+
+# Advanced AngularJS
+
+## What are decorators?
+
+Decorators are a design pattern that is used to separate modification or decoration of a class without modifying the original source code. In AngularJS, decorators are functions that allow a service, directive or filter to be modified prior to its usage.
+
+[https://docs.angularjs.org/guide/decorators](https://docs.angularjs.org/guide/decorators)
+
+There are two ways to register decorators
+
+```javascript
+$provide.decorator
+module.decorator```
+
+Each provide access to a `$delegate`, which is the instantiated service/directive/filter, prior to being passed to the service that required it.
+
