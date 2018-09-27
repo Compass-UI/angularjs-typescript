@@ -63,7 +63,7 @@ angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function ($uibMo
     modalInstance.result.then(function(dataFromModal){
       console.log(dataFromModal);
     }, function(){
-      console.log('Modal dismissed')
+      console.log('Outside click Modal dismissed')
     })
   }
   $ctrl.serviceCall = 'Call $http';
@@ -99,7 +99,21 @@ angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function ($uibMo
 });
 
 angular.module('ui.bootstrap.demo').component('loyaltyComponent', {
-  templateUrl: 'modal.tmpl.html'
+  templateUrl: 'modal.tmpl.html',
+  bindings: {
+    resolve: '<',
+    close: '&',
+    dismiss: '&'
+  },
+  controller: function(/** $uibModalInstance in controller */){
+    var $ctrl = this;
+    $ctrl.$onInit = function(){
+      console.log('Modal Initialized with loyaltyComponent');
+      $ctrl.data = $ctrl.resolve.serviceCall;
+    }
+    $ctrl.ok = function(){ console.log('ok'); $ctrl.close('$uibModalInstance.close') } /** TypeError: Cannot use 'in' operator to search for '$close' in $uibModalInstance.close  */
+    $ctrl.cancel = function(){ console.log('cancel'); $ctrl.dismiss({$value: '$uibModalInstance.dismiss'}) }
+  }
 })
 
 
