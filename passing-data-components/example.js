@@ -111,7 +111,7 @@ angular.module('ui.bootstrap.demo').component('loyaltyComponent', {
       console.log('Modal Initialized with loyaltyComponent');
       $ctrl.data = $ctrl.resolve.serviceCall;
     }
-    $ctrl.ok = function(){ console.log('ok'); $ctrl.close('$uibModalInstance.close') } /** TypeError: Cannot use 'in' operator to search for '$close' in $uibModalInstance.close  */
+    $ctrl.ok = function(){ console.log('ok'); $ctrl.close({ $value: '$uibModalInstance.close'}) } /** TypeError: Cannot use 'in' operator to search for '$close' in $uibModalInstance.close  */
     $ctrl.cancel = function(){ console.log('cancel'); $ctrl.dismiss({$value: '$uibModalInstance.dismiss'}) }
   }
 })
